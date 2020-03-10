@@ -5,6 +5,9 @@ import axios from 'axios';
 // Import Components
 import {Cocktail} from './styled components/Cocktail';
 
+// Import helper functions
+import randomColor from '../helper functions/randomColor';
+
 export default function CocktailList(props) {
 
   // STATE
@@ -29,13 +32,11 @@ export default function CocktailList(props) {
       { 
         dataObtained ?
         <div> 
-          <Cocktail>{cocktailsData[0].name}</ Cocktail>
-          <Cocktail>{cocktailsData[1].name}</Cocktail>
+          <Cocktail color={randomColor()}>{cocktailsData[0].name}</ Cocktail>
+          <Cocktail color={randomColor()}>{cocktailsData[1].name}</Cocktail>
         </div>
         : null
       }
     </div>
   )
 }
-{/* 
- */}
