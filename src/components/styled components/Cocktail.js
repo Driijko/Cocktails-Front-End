@@ -7,6 +7,9 @@ export const Cocktail = styled.div`
     border: 1px solid rgb(${props.color});
     cursor: pointer;
     margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   `}
 `
 
