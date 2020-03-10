@@ -1,5 +1,5 @@
-export default function randomRGB() {
-  return randRange(0, 256);
+export default function randomColor() {
+  return `${randRange(0, 256)}, ${randRange(0, 256)}, ${randRange(0, 256)}`;
 }
 
 function randRange(min, max) {

@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import axios from 'axios';
 
 // Import Components
-import {CocktailName} from './styled components/CocktailName';
+import {Cocktail} from './styled components/Cocktail';
 
 export default function CocktailList(props) {
   const [cocktailsData, setCocktailsData] = useState(["Dark and Stormy"])
@@ -19,7 +19,7 @@ export default function CocktailList(props) {
 
   return (
     <div>
-      <CocktailName>Margarita</ CocktailName>
+      <Cocktail>Margarita</ Cocktail>
     </div>
   )
 }
