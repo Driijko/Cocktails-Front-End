@@ -1,7 +1,7 @@
 // Import Libraries
 import styled, {css} from 'styled-components';
 
-export const Cocktail = styled.div`
+export const CocktailContainer = styled.div`
   ${props => props.color && css`
     color: rgb(${props.color});
     border: 1px solid rgb(${props.color});
