@@ -7,6 +7,9 @@ import Cocktail from './Cocktail';
 
 // Import styled components
 import {Title} from '../2 styledComponents/Title';
+import {CocktailListContainer} from '../2 styledComponents/CocktailListContainer';
+import {CocktailListContainerContainer} from '../2 styledComponents/CocktailListContainerContainer';
+import {Ingredient} from '../2 styledComponents/Ingredient';
 
 // Import helper functions
 import randomColor from '../3 helper functions/randomColor';
@@ -33,14 +36,14 @@ export default function CocktailList() {
           // for a given cocktail in an array and we'll pass it down as props. 
           const ingredients = [];
           for (let j = 0 ; j < res.data[i].ingredients.length ; j++) {
-            ingredients.push(<li key={j}>{res.data[i].ingredients[j]}</li>)
+            ingredients.push(<Ingredient key={j}>{res.data[i].ingredients[j]}</Ingredient>)
           }
           cocktailComponentsArray.push(
             <Cocktail 
               key={i} 
               name={res.data[i].name}
               color={randomColor()} 
-              ingredients={ingredients} 
+              ingredients={ingredients}
             />
           )
         }        
@@ -52,11 +55,15 @@ export default function CocktailList() {
   return (
     <div>
       <Title>COCKTAILS</Title>
-      {
-        dataObtained ?
-          cocktailComponents :
-          null
-      }
+      <CocktailListContainerContainer>
+      <CocktailListContainer>
+          {
+            dataObtained ?
+              cocktailComponents :
+              null
+          }
+        </CocktailListContainer>
+      </CocktailListContainerContainer>
     </div>
   )
 }

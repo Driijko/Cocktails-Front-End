@@ -18,9 +18,9 @@ export default function Cocktail(props) {
   }
   return (
     <div>
-      <CocktailContainer onClick={handleClick} color={props.color}>
+      <CocktailContainer onClick={handleClick} color={props.color} font={props.font}>
         <CocktailName>{props.name}</CocktailName>
-        {displayIngredients ? <Ingredients>{props.ingredients}</Ingredients> : null}
+        {displayIngredients ? <Ingredients color={props.color}>{props.ingredients}</Ingredients> : null}
       </CocktailContainer>
     </div>
   )
